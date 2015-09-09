@@ -87,10 +87,8 @@
     }
 }
 
-#pragma mark - layout stuff
+- (void)reLayout{
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
     CGSize contentSize = self.contentSize;
     CGRect frame = CGRectMake(0, 0, 100, self.frame.size.height);
     CGRect tempViewFrame;
@@ -278,7 +276,7 @@
         }
     }
     
-    [self setNeedsLayout];
+    [self reLayout];
 }
 
 #pragma mark - buttons handlers
